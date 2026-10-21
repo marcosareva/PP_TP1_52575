@@ -6,11 +6,12 @@ public class taller extends actividad {
         this.requiereNotebook = requiereNetbook;
     }
 
-    public boolean requiereNotebook() {
-        return requiereNotebook;
+
+    public double calcularCostoMateriales(){
+        return (requiereNotebook?5000:2000);
     }
 
-    public double calcularCosto(){
-        return requiereNotebook ? 5000 : 2000;
-    }
+    public String getTipo(){
+        return this.getClass().getSimpleName();
+    };
 }

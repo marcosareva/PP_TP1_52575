@@ -7,9 +7,11 @@ public class charla extends actividad {
         this.disertante = disertante;
     }
 
-    //PEDIR COSTO
-    public double calcularCosto(){
+    public double calcularCostoMateriales(){
         return 0;
-    }
+    };
 
+    public String getTipo(){
+        return this.getClass().getSimpleName();
+    };
 }

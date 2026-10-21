@@ -29,7 +29,7 @@ public abstract class actividad {
         this.inscripciones = new ArrayList<>();
     }
 
-    public inscripcion inscribir(estudiante estudiante){
+    public inscripcion inscribir(estudiante estudiante) {
         inscripcion i1 = new inscripcion(estudiante, this, LocalDate.now(), "INS");
         inscripciones.add(i1);
         return i1;
@@ -39,22 +39,25 @@ public abstract class actividad {
         return inscripciones;
     }
 
-    public abstract double calcularCosto();
 
-    public final int getIdAct(){
+    public final int getIdAct() {
         return idAct;
     }
 
-    public String getTituloAct(){
+    public String getTituloAct() {
         return tituloAct;
     }
 
-    public int getCupoMaximo(){
+    public int getCupoMaximo() {
         return cupoMaximo;
     }
 
-    public int getCupoMinimo(){
+    public int getCupoMinimo() {
         return cupoMinimo;
     }
 
+    //MÉTODOS ABSTRACTOS
+    public abstract double calcularCostoMateriales();
+
+    public abstract String getTipo();
 }
